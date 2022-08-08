@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Contenido semantido de HTML5" />
-    <link rel="stylesheet" href="" />
     <title>Entregable Tema 1 HTML5</title>
   </head>
   <body>
@@ -14,7 +13,7 @@
       <div class="titulo-header">
         <h2>La <span>"bici"</span> mas que un medio de transporte</h2>
       </div>
-      <div>
+      <div class="img-header">
         <figure>
           <img src="img/bici.jpg" alt="Bicicleta de ruta" />
           <figcaption>Biclicleta de ruta en fibra de carbono</figcaption>
@@ -24,11 +23,12 @@
     <!-- navegador principal  -->
     <nav>
       <ul>
-        <li>Historia y evolución</li>
-        <li>Ciclismo Profesional</li>
-        <li>Categorias</li>
-        <li>Galeria</li>
-        <li>Contactenos</li>
+        <li><a href="">Historia y evolución</a></li>
+        <li><a href="">Ciclismo Profesional</a></li>
+        <li><a href="">Ciclistas famosos</a></li>
+        <li><a href="">Campeones Le Tour France</a></li>
+        <li><a href="">Multimedia</a></li>
+        <li><a href="">Contactenos</a></li>
       </ul>
     </nav>
     <!-- contenido  -->
@@ -58,16 +58,53 @@
           <figcaption>Evolucion de la bicicleta</figcaption>
         </figure>
       </section>
+      <section class="ciclismo-profesional">
+        <div class="titulo-ciclismo">
+          <hgroup>
+            <h3>Ciclismo Profesional</h3>
+            <h5>Categoria World Tour</h5>
+          </hgroup>
+        </div>
+        <div>
+          <p>
+            El UCI WorldTour (en los años 2009-2010 UCI World Ranking, no
+            confundir con el UCI World Ranking creado en 2016 como sustituto del
+            Ranking UCI) es la denominación de todas las carreras de máximo
+            nivel de ciclismo en ruta masculino en la que estas son agrupadas en
+            un mismo calendario, tras el acuerdo definitivo entre la Unión
+            Ciclista Internacional y los organizadores de las Grandes Vueltas en
+            enero del 2009; aunque durante los dos primeros años siguieron
+            diferenciándose con denominaciones diferentes.​
+          </p>
+
+          <figure>
+            <img
+              src="img/profesional.jpg"
+              alt="Ciclismo Profesional World Tour"
+            />
+            <figcaption>Champs-Élysées - Francia</figcaption>
+          </figure>
+          <p>
+            Como es el sustituto del UCI ProTour se suele confundir con ella,
+            aunque las distintas normas y el acuerdo entre la Unión Ciclista
+            Internacional y los organizadores de las Grandes Vueltas han hecho
+            que sea una competición diferente. Siendo esta en principio una
+            combinación del Ranking UCI (por ser una clasificación más abierta
+            que el ProTour aunque a partir del 2011 volvió a ser más cerrada) y
+            del UCI ProTour (por tener los equipos UCI ProTeam la participación
+            asegurada y obligada en algunas carreras y a partir del 2011 en
+            todas ellas).
+          </p>
+        </div>
+      </section>
       <section class="articulos">
         <header class="titulos-articulos">
-          <h2>Ciclistas mas reconocidos del mundo</h2>
+          <h3>Ciclistas mas reconocidos del mundo</h3>
         </header>
         <!-- lance Amstrong  -->
-        <article>
-          <hgroup>
-            <h4>lance Amstrong</h4>
-            <h6><address>Michigan-USA</address></h6>
-          </hgroup>
+        <article class="lance">
+          <h4>lance Amstrong</h4>
+          <address>Michigan-USA</address>
           <p>
             Lance Edward Armstrong es un exciclista profesional estadounidense,
             campeón del mundo de ciclismo en ruta en 1993
@@ -87,11 +124,9 @@
           </button>
         </article>
         <!-- marco pantani  -->
-        <article>
-          <hgroup>
-            <h4>Marco Pantani</h4>
-            <h6><address>Veronna-Italia</address></h6>
-          </hgroup>
+        <article class="marco">
+          <h4>Marco Pantani</h4>
+          <address>Veronna-Italia</address>
           <p>
             Marco Pantani fue un ciclista profesional italiano, ganador del Giro
             de Italia 1998 y el Tour de Francia del mismo año.
@@ -101,22 +136,20 @@
             En la primavera de 1997, ya recuperado de la grave lesión, retornó a
             la competición, pero durante el Giro sufrió una caída al cruzarse un
             gato en su camino, que provocó su retirada de la carrera. En el Tour
-            de ese año protagonizó una intensa lucha por el maillot amarillo;
-            aunque se mostró imbatible en la montaña, Jan Ullrich, muy superior
-            en las etapas contrarreloj, supo limitar el tiempo perdido en los
-            Alpes y Pirineos logrando la victoria final y relegando a Pantani al
-            tercer puesto.
+            de ese año protagonizó una intensa lucha por el
+            <strong>maillot amarillo</strong> ; aunque se mostró imbatible en la
+            montaña, Jan Ullrich, muy superior en las etapas contrarreloj, supo
+            limitar el tiempo perdido en los Alpes y Pirineos logrando la
+            victoria final y relegando a Pantani al tercer puesto.
           </p>
           <button class="btn" id="btn-marco" onclick="leerMas()">
             Leer mas..
           </button>
         </article>
-
-        <article>
-          <hgroup>
-            <h4>Miguel Indurain</h4>
-            <h6><address>Navarra-España</address></h6>
-          </hgroup>
+        <!-- miguel indurain  -->
+        <article class="miguel">
+          <h4>Miguel Indurain</h4>
+          <address>Navarra-España</address>
           <p>
             Fue ganador del Tour de Francia durante cinco años consecutivos (de
             1991 a 1995) -el único que lo ha conseguido de forma consecutiva- y
@@ -133,90 +166,179 @@
             Alpes y Pirineos logrando la victoria final y relegando a Pantani al
             tercer puesto.
           </p>
-          <button class="btn" id="btn-marco" onclick="leerMas()">
+          <button class="btn" id="btn-miguel" onclick="leerMas()">
             Leer mas..
           </button>
         </article>
-        <aside>
-          <h5>Comentarios</h5>
-          <p>
-            El Salón de la Fama del Tour de Francia tiene muchos nombres que han
-            venido labrando la leyenda de la carrera durante más de un siglo,
-            pero entre ellos sobresalen los pentacampeones. Dos franceses;
-            <mark> Jacques Anquetil y Bernard Hinault</mark>; un belga,
-            <mark>Eddy Merckx</mark> ; y un español,<mark>Miguel Induráin</mark
-            >, se han repartido veinte victorias en París a partes iguales.
-          </p>
-          <time datetime="2015-03-15">15 de Marzo de 2022</time>
-          <p>
-            Una vez eliminado de la lista Lance Armstrong y sus siete triunfos
-            consecutivos a causa del dopaje, el debate sobre quién ha sido el
-            mejor corredor de la historia del Tour recobró cierto consenso en
-            torno a la figura de Eddy Merckx, por lo abrumador de sus victorias,
-            por su récord de triunfos de etapa y su dominio extendido a las
-            clasificaciones secundarias, o por su alucinante palmarés fuera de
-            Francia.
-          </p>
-          <time datetime="2015-06-29">29 de Junio de 2022</time>
-        </aside>
       </section>
-      <section>
-        <h2>Video</h2>
-        <video controls preload="auto" width="50%" height="50%">
-          <source src="videos/video1.mp4" />
-        </video>
+      <aside>
+        <h5>Comentarios</h5>
+        <p>
+          El Salón de la Fama del Tour de Francia tiene muchos nombres que han
+          venido labrando la leyenda de la carrera durante más de un siglo, pero
+          entre ellos sobresalen los pentacampeones. Dos franceses;
+          <mark> Jacques Anquetil y Bernard Hinault</mark>; un belga,
+          <mark>Eddy Merckx</mark> ; y un español,<mark>Miguel Induráin</mark>,
+          se han repartido veinte victorias en París a partes iguales.
+        </p>
+        <time datetime="2015-03-15">15 de Marzo de 2022</time>
+        <p>
+          Una vez eliminado de la lista Lance Armstrong y sus siete triunfos
+          consecutivos a causa del dopaje, el debate sobre quién ha sido el
+          mejor corredor de la historia del Tour recobró cierto consenso en
+          torno a la figura de Eddy Merckx, por lo abrumador de sus victorias,
+          por su récord de triunfos de etapa y su dominio extendido a las
+          clasificaciones secundarias, o por su alucinante palmarés fuera de
+          Francia.
+        </p>
+        <time datetime="2015-06-29">29 de Junio de 2022</time>
+      </aside>
+      <section class="campeones">
+        <h3>Campeones Le Tour France</h3>
+        <p>
+          Veamos a continuación todo el palmarés del Tour de Francia a lo largo
+          de su historia, después de completar este 2020 su 20ª edición
+        </p>
+        <table>
+          <tr>
+            <th>Pais</th>
+            <th>Nombre</th>
+            <th>Victorias</th>
+          </tr>
+          <tr>
+            <td>Francia</td>
+            <td>Jacques Anquetil</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Belgica</td>
+            <td>Eddy Merck</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Francia</td>
+            <td>Bernard Hinault</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>España</td>
+            <td>Miguel Indurarin</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Inglaterra</td>
+            <td>Chris Froome</td>
+            <td>4</td>
+          </tr>
+        </table>
       </section>
-      <section>
-        <h2>Audio</h2>
-        <audio controls>
-          <source src="audios/audio1.mp3" type="audio/mpeg"/>
-        </audio>
-      </section>
-      <section>
-        <div>
-          <h2>Galeria</h2>
+      <section class="multimedia">
+        <div class="titulo-multimedia">
+          <h3>Multimedia</h3>
         </div>
-        <figure>
-          <img src="img/galeria1.jpg" alt="" />
-          <img src="img/galeria2.jpg" alt="" />
-          <img src="img/galeria3.jpg" alt="" />
-          <img src="img/galeria5.jpg" alt="" />
-          <img src="img/galeria6.jpg" alt="" />
-          <img src="img/galeria8.jpg" alt="" />
-        </figure>
+        <div class="video">
+          <h4>Video</h4>
+          <video controls preload="auto">
+            <source src="videos/video1.mp4" />
+          </video>
+        </div>
+        <div class="audio">
+          <h4>Audio</h4>
+          <audio controls>
+            <source src="audios/audio1.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div class="galeria">
+          <div>
+            <h4>Galeria</h4>
+          </div>
+          <figure>
+            <img src="img/galeria1.jpg" alt="Transmision" />
+            <img src="img/galeria2.jpg" alt="Movistar team" />
+            <img src="img/galeria3.jpg" alt="Sobre rodillo" />
+            <img src="img/galeria5.jpg" alt="Bmx" />
+            <img src="img/galeria6.jpg" alt="Tour de france" />
+            <img src="img/galeria8.jpg" alt="Bici en sombra" />
+          </figure>
+        </div>
       </section>
-      <section>
-        <h4>Contactenos</h4>
-        <form action="#">
+      <section class="contactanos">
+        <h3>Contactanos</h3>
+        <form action="#" id="forma" class="forma">
           <fieldset>
             <legend>Datos de contacto</legend>
-            <label for="nombre">Nombre</label>
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Ingrese su nombre completo"
-            />
-            <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Ingrese su correo electronico"
-            />
-            <label for="mensaje">Mensaje</label>
-            <textarea name="" id="" cols="10" rows="2"></textarea>
+            <label for="nombre">
+              <span>¿Cual es tu nombre?</span>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                autocomplete="name"
+                placeholder="Ingresa tu nombre completo"
+                required
+              />
+            </label>
+            <label for="email">
+              <span>¿Cual es tu Email?</span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                placeholder="Ingresa tu email"
+                required
+              />
+            </label>
+            <label>
+              <span>¿De donde eres?</span>
+              <input list="pais" />
+              <datalist id="pais">
+                <option value="Colombia"></option>
+                <option value="Argentina"></option>
+                <option value="Peru"></option>
+                <option value="Ecuador"></option>
+                <option value="Panana"></option>
+                <option value="Chile"></option>
+                <option value="Uruguay"></option>
+                <option value="Paraguay"></option>
+                <option value="Brasil"></option>
+              </datalist>
+            </label>
+            <label for="mensaje">
+              <span>Dejanos tu mensaje!</span>
+              <textarea name="mensaje" id="mensaje" cols="10" rows="2">
+              </textarea>
+            </label>
             <input
               type="submit"
               name="enviar"
               id="enviar"
               value="Enviar información"
+              onclick="enviarInfo()"
             />
           </fieldset>
         </form>
       </section>
     </main>
-    <footer></footer>
-    <script src="#"></script>
+    <footer>
+      <div class="siguenos">
+        <h4>Siguenos:</h4>
+      </div>
+      <div class="link-redes">
+        <a target="_blank" href="https://www.youtube.com/"
+          ><img src="img/youtube.png" alt="Youtube"
+        /></a>
+        <a target="_blank" href="https://twitter.com/?lang=es"
+          ><img src="img/twitter.png" alt="Twitter"
+        /></a>
+        <a target="_blank" href="https://www.instagram.com/"
+          ><img src="img/instagram.png" alt="Instagram"
+        /></a>
+      </div>
+      <div class="derechos">
+        <p>Derechos reservados Copyright</p>
+        <address>jbenavidesnati05@gmail.com - Medellin - Colombia</address>
+      </div>
+    </footer>
   </body>
 </html>
